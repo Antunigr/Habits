@@ -17,20 +17,16 @@ struct SplashView: View {
             case.loading:
                 LoadingView(sizeLogo: 120)
             case.goToSingInScreen:
-                Text("SingInScreen")
+                viewModel.signInView()
             case.goToHomeScreen:
                 Text("HomeScreen")
             case.error(let msg):
                 LoadingView(sizeLogo: 120, error: msg)
             }
         }
-        .onAppear(perform:{
-            viewModel.onAppear
-        } )
+        .onAppear(perform: viewModel.onAppear)
     }
 }
-
-//>>>
 
 struct LoadingView: View {
     
