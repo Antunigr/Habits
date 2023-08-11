@@ -35,9 +35,7 @@ struct LoadingView: View {
     
     var body: some View {
         ZStack{
-            Image(systemName:"scribble.variable")
-                .font(.custom("logo", size: sizeLogo))
-            
+            LogoView(sizeLogo: sizeLogo)
             if let error = error{
                 Text("")
                     .alert(isPresented: .constant(true)){
@@ -50,6 +48,13 @@ struct LoadingView: View {
     }
 }
 
+struct LogoView: View {
+    var sizeLogo: CGFloat
+    var body: some View{
+        Image(systemName:"scribble.variable")
+            .font(.custom("logo", size: sizeLogo))
+    }
+}
 
 
 
