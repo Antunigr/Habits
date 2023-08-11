@@ -72,7 +72,7 @@ extension SignInView{
                 .foregroundColor(.gray)
                 .padding(.top, 48)
             VStack{
-                NavigationLink(destination: Text("Fazer login"),
+                NavigationLink(destination: viewModel.signUpView(),
                                tag: 1,
                                selection: $action,
                                label: {EmptyView()})

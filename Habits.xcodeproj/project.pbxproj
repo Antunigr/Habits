@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E4F3A602A86C34A00FBE136 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4F3A5F2A86C34A00FBE136 /* SignUpViewModel.swift */; };
+		3E4F3A622A86C35700FBE136 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4F3A612A86C35700FBE136 /* SignUpView.swift */; };
 		3E8324722A7C2960004EEBA2 /* HabitsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8324712A7C2960004EEBA2 /* HabitsApp.swift */; };
 		3E8324762A7C2963004EEBA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E8324752A7C2963004EEBA2 /* Assets.xcassets */; };
 		3E8324792A7C2963004EEBA2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E8324782A7C2963004EEBA2 /* Preview Assets.xcassets */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E4F3A5F2A86C34A00FBE136 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		3E4F3A612A86C35700FBE136 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		3E83246E2A7C2960004EEBA2 /* Habits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Habits.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E8324712A7C2960004EEBA2 /* HabitsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsApp.swift; sourceTree = "<group>"; };
 		3E8324752A7C2963004EEBA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -52,6 +56,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E4F3A5B2A86C31400FBE136 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				3E4F3A5C2A86C31E00FBE136 /* Views */,
+				3E4F3A5D2A86C32500FBE136 /* ViewModels */,
+				3E4F3A5E2A86C32B00FBE136 /* Models */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		3E4F3A5C2A86C31E00FBE136 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3E4F3A612A86C35700FBE136 /* SignUpView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3E4F3A5D2A86C32500FBE136 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				3E4F3A5F2A86C34A00FBE136 /* SignUpViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		3E4F3A5E2A86C32B00FBE136 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		3E8324652A7C2960004EEBA2 = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +108,7 @@
 		3E8324702A7C2960004EEBA2 /* Habits */ = {
 			isa = PBXGroup;
 			children = (
+				3E4F3A5B2A86C31400FBE136 /* SignUp */,
 				3EF1DBF02A85E90300ABC1BA /* Home */,
 				3EF286662A7C8E410097BF31 /* SignIn */,
 				3EF286652A7C8DA90097BF31 /* Splash */,
@@ -264,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E8324852A7C2A1C004EEBA2 /* SplashUIState.swift in Sources */,
+				3E4F3A602A86C34A00FBE136 /* SignUpViewModel.swift in Sources */,
 				3EF1DBF72A85E96000ABC1BA /* HomeViewModel.swift in Sources */,
 				3E8324722A7C2960004EEBA2 /* HabitsApp.swift in Sources */,
 				3EF2866D2A7C8F420097BF31 /* SignInViewModel.swift in Sources */,
@@ -272,6 +311,7 @@
 				3E8324832A7C29BE004EEBA2 /* SplashView.swift in Sources */,
 				3EE4EC782A7C715200829D31 /* SplashViewModel.swift in Sources */,
 				3EF1DBF92A85E96B00ABC1BA /* HomeModel.swift in Sources */,
+				3E4F3A622A86C35700FBE136 /* SignUpView.swift in Sources */,
 				3EF1DBED2A85E30000ABC1BA /* SignInUIState.swift in Sources */,
 				3EF2866F2A7C8FE30097BF31 /* SplashViewRouter.swift in Sources */,
 				3EF2866B2A7C8F050097BF31 /* SignInView.swift in Sources */,
