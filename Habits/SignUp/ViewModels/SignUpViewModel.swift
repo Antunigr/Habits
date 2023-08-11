@@ -6,15 +6,18 @@
 //
 
 import SwiftUI
+import Combine
 
 class SignUpViewModel: ObservableObject{
     
+    var publisher: PassthroughSubject<Bool, Never>!
+    	
     func SignUp(){
         self.uiState = .loading
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5 ){
-//          self.uiState = .error("erro no cadastro")
-            self.uiState = .goToHomePage
+            self.uiState = .sucess
+            self.publisher.send(true)
         }
     }
     

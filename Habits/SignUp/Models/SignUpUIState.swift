@@ -10,6 +10,6 @@ import Foundation
 enum SignUpUIState{
     case none
     case loading
-    case goToHomePage
+    case sucess
     case error(String)
 }
