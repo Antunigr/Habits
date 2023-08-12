@@ -53,12 +53,21 @@ struct SignInView: View {
 }
 extension SignInView{
     var emailField: some View{
-        SecureField("", text: $email)
-            .border(Color.black)
+        
+        EditTextView(text: $email,
+                     placeholder: "E-mail",
+                     keyboard: .emailAddress,
+                     error: "E-mail invalid",
+                     failure: !email.isEmail())
+        
     }
     var passwordField: some View{
-        SecureField("", text: $password)
-            .border(Color.black)
+        EditTextView(text: $password,
+                     placeholder: "Senha",
+                     keyboard: .emailAddress,
+                     error: "senha fraca",
+                     failure: password.count < 6,
+                     isSecure: true)
     }
     var enterButton: some View{
         Button("Entrar"){
