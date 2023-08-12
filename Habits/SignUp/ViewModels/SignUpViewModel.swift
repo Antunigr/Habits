@@ -10,6 +10,13 @@ import Combine
 
 class SignUpViewModel: ObservableObject{
     
+    @Published var fullName = ""
+    @Published var email = ""
+    @Published var password = ""
+    @Published var phone = ""
+    @Published var birthday = ""
+    @Published var gender: Gender = Gender.famale
+    
     var publisher: PassthroughSubject<Bool, Never>!
     	
     func SignUp(){

@@ -10,11 +10,13 @@ import Combine
 
 class SignInViewModel : ObservableObject{
     
+    @Published var email = ""
+    @Published var password = ""
+    @Published var uiState: SignInUIState = .none
+    
     private var cancellable : AnyCancellable?
     private let publisher = PassthroughSubject<Bool, Never>()
   
-    @Published var uiState: SignInUIState = .none
-    
     init(){
         cancellable = publisher.sink {value in
             print("usuario criado com sucesso = \(value)")
@@ -29,7 +31,7 @@ class SignInViewModel : ObservableObject{
         cancellable?.cancel()
     }
     
-    func login(email: String, password: String){
+    func login(){
         self.uiState = .loading
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1){
