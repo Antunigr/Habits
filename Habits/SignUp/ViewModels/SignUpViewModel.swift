@@ -18,18 +18,20 @@ class SignUpViewModel: ObservableObject{
     @Published var gender: Gender = Gender.famale
     
     var publisher: PassthroughSubject<Bool, Never>!
-    	
+    @Published var uiState: SignUpUIState = .none
+    
     func SignUp(){
         self.uiState = .loading
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5 ){
-            self.uiState = .sucess
-            self.publisher.send(true)
+        WebService.postUser(fullname: fullName,
+                            email: email,
+                            password: password,
+                            phone: phone,
+                            birthday: birthday,
+                            gender: gender.index)
         }
     }
-    
-    @Published var uiState: SignUpUIState = .none
-}
+
 
 extension SignUpViewModel{
     func homeView() -> some View{
